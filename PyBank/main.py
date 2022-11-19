@@ -48,3 +48,15 @@ print("Total: $", total_profit)
 print("Average Change: $", avg_profit_change)
 print("Greatest Increase in Profits: $", max(net_change_list))
 print("Greatest Decrease in Profits: $", min(net_change_list))
+
+
+# Write txt. file
+text_file = os.path.join("Analysis", "file.txt")
+
+with open("text_file", "w") as file:
+    file.write(print(str("Total Months:", total_month + 1)))
+    file.write(print(str("Total: $", total_profit)))
+    file.write(print(str("Average Change: $", avg_profit_change)))
+    file.write(print(str("Greatest Increase in Profits: $", max(net_change_list))))
+    file.write(print(str("Greatest Decrease in Profits: $", min(net_change_list))))
+

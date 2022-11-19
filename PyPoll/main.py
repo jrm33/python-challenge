@@ -37,6 +37,17 @@ max_key = max(votes_won, key=votes_won.get)
 
 # Print
 print("Election Results:")
+print("----------")
 print("Total Votes:", total_votes)
 print("Votes Won by Candidate:", votes_won)
+print("----------")
 print("Winner:", max_key)
+
+
+# Write txt. filecd
+text_file = os.path.join("Analysis", "file.txt")
+
+with open("text_file", "w") as file:
+    file.write(print(str("Total Votes:", total_votes)))
+    file.write(print(str("Votes Won by Candidate:", votes_won)))
+    file.write(print(str("Winner:", max_key)))
